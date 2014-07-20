@@ -90,6 +90,7 @@ names(SumData) &lt;- c(&quot;Date&quot;,&quot;Steps&quot;)</code></pre>
 <pre><code>## [1] 10766</code></pre>
 <pre class="r"><code>median(SumData$Steps)</code></pre>
 <pre><code>## [1] 10765</code></pre>
+<p>Mean and median are 10766.19 and 10765 respectively</p>
 </div>
 <div id="what-is-the-average-daily-activity-pattern" class="section level2">
 <h2>What is the average daily activity pattern?</h2>
@@ -104,6 +105,7 @@ plot(AveData$TimeOfDay, AveData$Steps,type=&quot;l&quot;, xlab=&quot;Time of Day
 <pre class="r"><code>AveData$TimeOfDay &lt;- gsub(&quot;2014-07-20 &quot;,&quot;&quot;,AveData$TimeOfDay)
 AveData$TimeOfDay[which.max(AveData$Steps)]</code></pre>
 <pre><code>## [1] &quot;08:35:00&quot;</code></pre>
+<p>The time interval with max. steps is 08:35:00-08:40:00.</p>
 </div>
 <div id="imputing-missing-values" class="section level2">
 <h2>Imputing missing values</h2>
@@ -126,7 +128,7 @@ hist(SumData$Steps, col = &quot;red&quot;,breaks=25,main=&quot;Histogram of Step
 <pre><code>## [1] 9504</code></pre>
 <pre class="r"><code>median(SumData$Steps)</code></pre>
 <pre><code>## [1] 10395</code></pre>
-<p>The results are as expected</p>
+<p>The mean and media values are 9504 and 10395 respectively. The results are as expected</p>
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>

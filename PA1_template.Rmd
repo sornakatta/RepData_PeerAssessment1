@@ -50,6 +50,8 @@ mean(SumData$Steps)
 median(SumData$Steps)
 ```
 
+Mean and median are 10766.19 and 10765 respectively
+
 ## What is the average daily activity pattern?
 Obtaining dataframe containing average steps for each time interval
 
@@ -71,6 +73,8 @@ Obtaining 5 min interval with maximum number of steps
 AveData$TimeOfDay <- gsub("2014-07-20 ","",AveData$TimeOfDay)
 AveData$TimeOfDay[which.max(AveData$Steps)]
 ```
+
+The time interval with max. steps is 08:35:00-08:40:00.
 
 ## Imputing missing values
 Calculating and reporting total number of missing values
@@ -106,6 +110,7 @@ mean(SumData$Steps)
 median(SumData$Steps)
 ```
 
+The mean and media values are 9504 and 10395 respectively.
 The results are as expected
 
 
